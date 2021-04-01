@@ -1,0 +1,70 @@
+.numbers {
+   width: 100%;
+   background-color: #10c9c3;
+   // .numbers__body
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 240px;
+   }
+   // .numbers__item
+   &__items {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px 0;
+   }
+   // .numbers__item
+   &__item {
+      flex: 1 0 25%;
+      display: flex;
+      align-items: flex-start;
+      padding: 0 5px;
+      @media screen and (max-width: $md3+px) {
+         flex: 1 0 50%;
+         margin: pxResponsive(10, 30) 0px;
+         &:nth-child(1),
+         &:nth-child(2) {
+            margin-top: 0;
+         }
+      }
+      @media screen and (max-width: $md4+px) {
+         flex: 1 0 100%;
+
+         &:nth-child(2) {
+            margin-top: pxResponsive(10, 30);
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   // .numbers__icon
+   &__icon {
+      p {
+         color: #ffffff;
+         font-family: "Pe -icon -7-stroke";
+         font-size: pxResponsive(38, 48);
+      }
+   }
+   // .numbers__numbers
+   &__numbers {
+      margin: 0px 0px 0px 27px;
+      p {
+         color: #ffffff;
+         font-family: Montserrat;
+         text-transform: uppercase;
+         &:nth-child(1) {
+            font-size: 18px;
+            letter-spacing: 0.54px;
+            margin: 0px 0px pxResponsive(5, 16) 0px;
+         }
+         &:nth-child(2) {
+            font-size: pxResponsive(10, 12);
+            letter-spacing: 1.2px;
+            line-height: 20px;
+         }
+      }
+   }
+}

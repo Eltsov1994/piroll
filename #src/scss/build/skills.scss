@@ -1,0 +1,75 @@
+.skills {
+   position: relative;
+   background-color: #f3f3f3;
+   z-index: -1;
+   // .skills__body
+   &__body {
+      display: flex;
+   }
+   // .skills__skills
+   &__skills {
+      width: 50%;
+      padding: 164px 0;
+      @media screen and (max-width: $md3+px) {
+         width: 60%;
+      }
+      @media screen and (max-width: $md4+px) {
+         width: 100%;
+      }
+   }
+   // .skills__title
+   &__title {
+      text-align: left;
+   }
+   // .skills__sliders
+   &__sliders {
+   }
+   // .skills__image
+   &__image {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      right: 0;
+      @media screen and (max-width: $md3+px) {
+         width: 40%;
+      }
+      .ibg {
+         background-position: 0% 50%;
+      }
+   }
+}
+
+.sliders {
+   // .sliders__item
+   &__item {
+   }
+   // .sliders__title
+   &__title {
+   }
+   // .sliders__slide
+   &__slide {
+      position: relative;
+      width: 87%;
+      height: 3px;
+      margin: 19px 0px 41px 0px;
+      @media screen and (max-width: $md4+px) {
+         width: 100%;
+      }
+      span {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         display: inline-block;
+         transition: all 1s cubic();
+         &:first-child {
+            width: 0;
+            background-color: #10c9c3;
+            z-index: 1;
+         }
+         &:last-child {
+            background-color: #d8d8d8;
+            z-index: 0;
+         }
+      }
+   }
+}

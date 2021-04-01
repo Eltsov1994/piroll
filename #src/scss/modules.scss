@@ -1,0 +1,459 @@
+////////////////////////////////////////////
+///////////////////IBG//////////////////////
+////////////////////////////////////////////
+
+.ibg,
+.ibgResponsive {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.ibg img,
+.ibgResponsive img {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ibg,
+.ibgResponsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+////////////////////////////////////////////
+/////////////МИГАЮЩИЙ КУРСОР////////////////
+////////////////////////////////////////////
+
+.typed-cursor {
+    opacity: 1;
+    font-weight: 200;
+    -webkit-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+////////////////////////////////////////////
+//////////////////SLICK/////////////////////
+////////////////////////////////////////////
+
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+    //overflow: hidden;
+    min-width: 0;
+}
+/* Лента слайдов */
+.slick-track {
+    @include flexbox();
+    align-items: flex-start;
+}
+
+//////////////////СЛАЙД/////////////////////
+
+/* Слайд */
+.slick-slide {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // cursor: pointer;
+    img {
+        // transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
+        // transform: scale(0);
+        // opacity: 0;
+        // width: 100%;
+        // transition: all 1.0s ease;
+    }
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+    //   img {
+    //     transform: scale(1);
+    //     opacity: 1;
+    // }
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+
+//////////////////СТРЕЛКИ/////////////////////
+
+/* Стрелка */
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 29px;
+    height: 88px;
+    transform: translateY(-50%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    //background-color: #000;
+    // opacity: 0.6;
+    // &:hover {
+    //     opacity: 1;
+    // }
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+    background-image: url("../img/icons/arrow_left.svg");
+    background-position: 40% 50%;
+    left: -65px;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+    background-image: url("../img/icons/arrow_right.svg");
+    background-position: 60% 50%;
+    right: -65px;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+
+//////////////////ТОЧКИ/////////////////////
+
+/* Точки (булиты) */
+.slick-dots {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.slick-dots li {
+    list-style: none;
+    margin: 0px 6.5px 34px;
+}
+/* Активная точка */
+.slick-dots li.slick-active button {
+    opacity: 0.51;
+}
+/* Элемент точки */
+.slick-dots li button {
+    font-size: 0;
+    width: 9px;
+    height: 9px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+////////////////////////////////////////////
+//////////////////ULOGIN////////////////////
+////////////////////////////////////////////
+
+@mixin uloginIcons() {
+    width: 40px !important;
+    height: 40px !important;
+    @media screen and (max-width: $md3+px) {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+.ulogin-buttons-container {
+    width: auto !important;
+    height: auto !important;
+}
+
+.ulogin-button-vkontakte {
+    background: url("../../img/icons/vk.svg") 0 0 / 100% no-repeat !important;
+    @include uloginIcons();
+}
+
+.ulogin-button-instagram {
+    background: url("../../img/icons/instagram.svg") 0 0 / 100% no-repeat !important;
+    @include uloginIcons();
+}
+
+.ulogin-button-google {
+    background: url("../../img/icons/google.svg") 0 0 / 100% no-repeat !important;
+    @include uloginIcons();
+}
+
+.ulogin-button-facebook {
+    background: url("../../img/icons/facebook.svg") 0 0 / 100% no-repeat !important;
+    @include uloginIcons();
+}
+
+////////////////////////////////////////////
+////////////////КНОПКА ЕЩЕ//////////////////
+////////////////////////////////////////////
+
+.plus {
+    max-height: 50px;
+    transition: all 1s ease;
+    @media screen and (max-width: $md3+px) {
+        max-height: 75px;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, #000, transparent 50%);
+    }
+    &:before {
+        content: "Читать далее...";
+        position: absolute;
+        padding: 3px 12px;
+        bottom: -30px;
+        right: 0;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+.plus_2 {
+    max-height: 9000px;
+    transition: all 1s ease;
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+    }
+    &:before {
+        content: "Читать далее...";
+        position: absolute;
+        padding: 3px 12px;
+        bottom: -30px;
+        right: 0;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+}
+
+////////////////////////////////////////////
+//////////////КРЕСТИК ЗАКРЫТЬ///////////////
+////////////////////////////////////////////
+
+.close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    transition: all 0.4s ease;
+    z-index: 9999;
+    @media screen and (min-width: $md3+px) {
+        &:hover {
+            transform: rotate(180deg);
+            transform-origin: center;
+            cursor: pointer;
+        }
+    }
+    &:after,
+    &:before {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        border-radius: 10px;
+        transform-origin: center;
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+}
+
+////////////////////////////////////////////
+///////////////ПОКАЗАТЬ POPUP///////////////
+////////////////////////////////////////////
+
+.popup__show,
+.popup__overlay__show {
+    transform: scale(1) !important;
+    visibility: visible !important;
+}
+
+////////////////////////////////////////////
+///////////////////RANGER///////////////////
+////////////////////////////////////////////
+
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to,
+.irs--flat .irs-bar,
+.irs--flat .irs-handle > i:first-child {
+    background-color: $brownLight;
+}
+.irs--flat .irs-from:before,
+.irs--flat .irs-single:before,
+.irs--flat .irs-to:before {
+    border-top-color: $brownLight;
+}
+
+.irs--round .irs-from,
+.irs--round .irs-single,
+.irs--round .irs-to,
+.irs--round .irs-bar,
+.irs--round .irs-handle > i:first-child {
+    background-color: $brownLight;
+}
+.irs--round .irs-from:before,
+.irs--round .irs-single:before,
+.irs--round .irs-to:before {
+    border-top-color: $brownLight;
+}
+
+.irs--round .irs-handle {
+    border: 4px solid $brownLight;
+}
+
+////////////////////////////////////////////
+//////////////////OVERLAY///////////////////
+////////////////////////////////////////////
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+//? ========================================
+//? ===============БУРГЕР===================
+//? ========================================
+._burger {
+    display: none;
+}
+
+@media screen and (max-width: $md3+px) {
+    ._burger {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #10c9c3;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 3;
+        transition: all 0.2s cubic();
+        > div {
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 19px;
+            span {
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                left: 0;
+                top: 8px;
+                background: $white;
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                left: 0;
+                background: $white;
+                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            &:before {
+                top: 0;
+            }
+            &:after {
+                bottom: 0;
+            }
+        }
+        &.active {
+            background-color: #10c9c3;
+        }
+        &.active._burger div span {
+            transform: scale(0);
+            background: $white;
+        }
+        &.active._burger > div:before {
+            transform: rotate(45deg);
+            top: 8px;
+            background: $white;
+        }
+        &.active._burger div:after {
+            transform: rotate(-45deg);
+            bottom: 8px;
+            background: $white;
+        }
+    }
+}

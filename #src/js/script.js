@@ -1,0 +1,7 @@
+@@include('jquery.min.js')
+@@include('vendors.js')
+@@include('jq-start.js')
+@@include('forms.js')
+@@include('dynamic_adapt.js')
+@@include('custom.js')
+@@include('jq-end.js')

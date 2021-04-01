@@ -1,0 +1,70 @@
+//ОБЛАКА HEADER
+
+@-webkit-keyframes animCloud {
+	from {
+		-webkit-transform: translateX(100%);
+	}
+
+	to {
+		-webkit-transform: translateX(-100%);
+	}
+}
+
+@keyframes animCloud {
+	from {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+
+	to {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+}
+
+//СТРЕЛКА HEADER
+
+@keyframes arrow-8 {
+	0% {
+		opacity: 0;
+		transform: translate(-13px, -53px) rotate(-45deg);
+	}
+	10%,
+	90% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+		border-left: 5px solid red;
+		border-bottom: 5px solid red;
+		transform: translate(-13px, 0px) rotate(-45deg);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-13px, 53px) rotate(-45deg);
+	}
+}
+
+//СТОИМОСТЬ
+
+@keyframes price {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+//ПЛАВНОЕ ПОЯВЛЕНИЕ В КАЛЬКУЛЯТОРЕ
+@keyframes fade {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

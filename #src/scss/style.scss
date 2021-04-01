@@ -1,0 +1,116 @@
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+
+//Цвета
+$white: #fff;
+$whiteGrey: #f5f5f5;
+$whiteGrey2: #dddddd;
+$cream: #e8cab1;
+$brownLight: #af7663;
+$brownDark: #3e1906;
+$green: #476c53;
+$red: #d14545;
+$yellow: #f6e324;
+$yellowHover: #fff270;
+$grey: #3b3632;
+$greyLight: #958a8e;
+$blue: #2c758b;
+$black: #141215;
+
+//Числовые переменные
+$brz: 10px;
+
+//! Шрифты (начертания)
+$fontMain: "OpenSans";
+$fontZMain: 16px;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+// Миксины
+@import "mixin.scss";
+
+// Обнуление стилей
+@import "nullstyle.scss";
+
+// KeyFrames
+@import "keyframes.scss";
+
+// Подключаем шрифты
+@import "__fonts.scss";
+
+//Настройки плагинов
+@import "forms.scss";
+@import "modules.scss";
+@import "popover.min.scss";
+@import "ui.scss";
+
+//Внешние модули
+@import "vendors/video-js.scss";
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 20px;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 20px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//Назначаем основной шрифт
+* {
+	font-family: $fontMain, sans-serif;
+	font-weight: 400;
+	font-size: $fontZMain;
+}
+
+html,
+body {
+	min-width: $minwidth;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	//overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+._content {
+	flex: 1 0 auto;
+}
+._footer {
+	flex: 0 0 auto;
+}
+
+a {
+	color: $black;
+}
+
+//</СТИЛИ ДЛЯ БЛОКОВ >===========================================================================================================
+//@import 'build/headertop.scss';
+@import "build/main.scss";

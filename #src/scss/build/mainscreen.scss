@@ -1,0 +1,167 @@
+.mainscreen {
+   position: relative;
+   padding: 63px 0px 0px 0px;
+   //mainscreen__wrapper
+   &__wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      z-index: 1;
+   }
+
+   // .mainscreen__body
+   &__body {
+      width: 50%;
+      @media screen and (max-width: $md3+px) {
+         width: 60%;
+      }
+      @media screen and (max-width: 530px) {
+         width: 70%;
+      }
+      @media screen and (max-width: $md4+px) {
+         width: 100%;
+      }
+   }
+   // .mainscreen__title
+   &__title {
+      h1 {
+         color: #1d1d1d;
+         font-family: Montserrat;
+         font-size: pxResponsive(28, 38);
+         letter-spacing: 0.38px;
+         font-weight: 500;
+      }
+   }
+   // .mainscreen__text
+   &__text {
+      position: relative;
+      color: #787878;
+      font-family: "Nunito Sans";
+      font-size: pxResponsive(16, 18);
+      font-weight: 400;
+      line-height: pxResponsive(24, 28);
+      letter-spacing: 0.09px;
+      margin: 32px 0 39px;
+      @media screen and (max-width: $md3+px) {
+         color: #000;
+      }
+   }
+   // .mainscreen__button
+   &__button {
+      button {
+      }
+   }
+
+   //mainscreen__ovelay
+   &__ovelay {
+      @media screen and (max-width: $md3+px) {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba($color: #ffffff, $alpha: 0.5);
+      }
+   }
+
+   .ibg {
+      background-position: 50% 50%;
+   }
+}
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.mainpage {
+   .mainscreen {
+      //mainscreen__wrapper
+
+      &__wrapper {
+         height: 100vh;
+         min-height: 435px;
+         justify-content: flex-end;
+         align-items: center;
+      }
+
+      // .mainscreen__body
+      &__body {
+      }
+      // .mainscreen__title
+      &__title {
+      }
+      // .mainscreen__text
+      &__text {
+      }
+      // .mainscreen__button
+      &__button {
+         button {
+         }
+      }
+
+      //mainscreen__ovelay
+      &__ovelay {
+      }
+
+      .ibg {
+         background-position: 30% 50%;
+      }
+   }
+}
+
+.homepage {
+   .mainscreen {
+      //mainscreen__wrapper
+
+      &__wrapper {
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         padding: 100px 0;
+      }
+
+      // .mainscreen__body
+      &__body {
+      }
+      // .mainscreen__title
+      &__title {
+      }
+      // .mainscreen__text
+      &__text {
+      }
+   }
+}
+
+.aboutpage {
+   .mainscreen {
+      //mainscreen__wrapper
+
+      &__wrapper {
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         padding: 120px 0;
+      }
+
+      // .mainscreen__body
+      &__body {
+      }
+      // .mainscreen__title
+      &__title {
+         h1 {
+            color: #fff;
+         }
+      }
+      // .mainscreen__text
+      &__text {
+         color: #fff;
+      }
+      //mainscreen__ovelay
+      &__ovelay {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba($color: #000000, $alpha: 0.5);
+      }
+   }
+}

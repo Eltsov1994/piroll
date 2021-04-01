@@ -1,0 +1,65 @@
+.testimonials {
+   // .testimonials__body
+   &__body {
+   }
+   // .testimonials__slider
+   &__slider {
+   }
+   // .testimonials__items
+   &__items {
+      background-color: #10c9c3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   // .testimonials__item
+   &__item {
+      padding: pxResponsive(120, 180) 20px;
+      max-width: 824px;
+      text-align: center;
+   }
+   // .testimonials__text
+   &__text {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: pxResponsive(21, 24);
+      line-height: pxResponsive(32, 36);
+      margin: 0px 0px 35px 0px;
+      letter-spacing: 0.24px;
+   }
+   // .testimonials__subtext
+   &__subtext {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+   }
+
+   //! SLICK
+
+   .slick-dots {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      li {
+         margin: 0 4.5px 60px;
+
+         button {
+            width: 6px;
+            height: 6px;
+            background-color: #b0e8e6;
+         }
+
+         &.slick-active {
+            button {
+               width: 10px;
+               height: 10px;
+               background-color: #ffffff;
+               opacity: 1;
+            }
+         }
+      }
+   }
+}

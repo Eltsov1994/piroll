@@ -1,0 +1,45 @@
+@@include('jquery.min.js')
+@@include('vendors.js')
+@@include('jq-start.js')
+@@include('forms.js')
+@@include('dynamic_adapt.js')
+@@include('custom.js')
+@@include('jq-end.js')
+
+VENDORS
+@@include('jquery.popover.min.js')
+@@include('jquery.animateNumber.min.js')
+@@include('map.js')
+@@include('popup.js')
+@@include('clipboard.min.js')
+@@include('jquery.nicescroll.min.js')
+@@include('slick.min.js')
+
+@@include('videojs.js') //HTML 5 VIDEO
+
+
+//SLICK
+$('.mainfooter__slider').slick({
+   autoplay: false, //Автоматическое перелистывание
+   autoplaySpeed: 2000, // Скорость автоматического перелистывания
+   dots: false, // Точки
+   arrows: true, // Стрелки
+   adaptiveHeight: false, // Адаптивная высота слайда
+   lazyLoad: 'progressive',//Ленивая загрузка
+   easing: 'ease', // Характер анимации перелистывания
+   pauseOnHover: true, // Пауза при наведении
+   touchTreshold: 1, // Срабатывание прокрутки слайда при таче (default: 5)
+   waitForAnimate: false, //Задержка при быстром клике на стрелке
+   slidesToShow: 3,
+   responsive: [{
+      breakpoint: 992.98,
+      settings: {
+         slidesToShow: 2,
+      }
+   }, {
+      breakpoint: 600,
+      settings: {
+         slidesToShow: 1,
+      },
+   }]
+});
